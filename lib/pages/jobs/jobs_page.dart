@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../models/job_model.dart';
+import '../../services/job_service.dart';
 import 'models/job_model.dart';
 import 'services/job_service.dart'; // Ensure this is the correct path to your JobService
 import 'widgets/job_tile.dart';

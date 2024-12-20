@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:umma_b2c/pages/home/home_page.dart';
-import 'package:umma_b2c/pages/mosque/mosque_finder_page.dart';
-import 'package:umma_b2c/pages/mosque/mosque_detail_page.dart';
-import 'package:umma_b2c/pages/prayer/prayer_timings_page.dart';
-import 'package:umma_b2c/pages/anjuman/anjuman_updates_page.dart';
-import 'package:umma_b2c/pages/jobs/jobs_page.dart';
-import 'package:umma_b2c/pages/ads/ads_page.dart';
-import 'package:umma_b2c/pages/settings/settings_page.dart';
+import '../pages/ads/ads_page.dart';
+import '../pages/anjuman/anjuman_updates_page.dart';
+import '../pages/home/home_page.dart';
+import '../pages/jobs/jobs_page.dart';
+import '../pages/mosque/mosque_detail_page.dart';
+import '../pages/mosque/mosque_finder_page.dart';
+import '../pages/prayer/prayer_timings_page.dart';
+import '../pages/settings/settings_page.dart';
 
 class AppRoutes {
   static const String home = '/';
@@ -22,12 +22,15 @@ class AppRoutes {
     return {
       home: (context) => const HomePage(),
       mosqueFinder: (context) => const MosqueFinderPage(),
-      mosqueDetail: (context) => const MosqueDetailPage(),
-      prayerTimings: (context) => const PrayerTimingsPage(),
-      anjumanUpdates: (context) => const AnjumanUpdatesPage(),
-      jobs: (context) => const JobsPage(),
-      ads: (context) => const AdsPage(),
-      settings: (context) => const SettingsPage(),
+      mosqueDetail: (context) => MosqueDetailPage(
+        mosqueName: 'Default Mosque Name', // Pass a default value or handle dynamically
+        mosqueAddress: 'Default Mosque Address',
+      ),
+      prayerTimings: (context) => PrayerTimingsPage(),
+      anjumanUpdates: (context) => AnjumanUpdatesPage(),
+      jobs: (context) => JobsPage(),
+      ads: (context) => AdsPage(),
+      settings: (context) => SettingsPage(),
     };
   }
 }

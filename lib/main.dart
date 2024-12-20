@@ -32,10 +32,10 @@ class UmmaB2CApp extends StatelessWidget {
       initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.home: (context) => const HomePage(),
-        AppRoutes.prayerTimings: (context) => const PrayerTimingsPage(),
-        AppRoutes.anjumanUpdates: (context) => const AnjumanUpdatesPage(),
-        AppRoutes.ads: (context) => const AdsPage(),
-        AppRoutes.jobs: (context) => const JobsPage(),
+        AppRoutes.prayerTimings: (context) => PrayerTimingsPage(), // Removed `const`
+        AppRoutes.anjumanUpdates: (context) => AnjumanUpdatesPage(), // Removed `const`
+        AppRoutes.ads: (context) => AdsPage(), // Removed `const`
+        AppRoutes.jobs: (context) => JobsPage(), // Removed `const`
       },
     );
   }
